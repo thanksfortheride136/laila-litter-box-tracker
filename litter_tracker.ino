@@ -85,7 +85,7 @@ void push_button() {
 
   lcd.clearDisplay();
   lcd.setCursor(0, 0);
-  lcd.println("Leila Potty Tracker");
+  lcd.println("Laila Potty Tracker");
   lcd.println("Visits Today: " + String(litter_box_visits_today));
   lcd.println("Last Poop:");
   lcd.println(last_poop_time);
