@@ -29,7 +29,7 @@ void setup() {
   connect_wifi();
   screen_settings();
 
-  configTime(0, 3600, "pool.ntp.org");
+  configTzTime("EST5EDT,M3.2.0/2,M11.1.0/2", "pool.ntp.org");
 
   lcd.clearDisplay();
   lcd.display();
@@ -62,7 +62,7 @@ String get_time() {
   }
 
   char time_string[30];
-  strftime(time_string, sizeof(time_string), "%m/%d %H:%M", &timeinfo);
+  strftime(time_string, sizeof(time_string), "%m/%d %I:%M %p", &timeinfo);
 
   return String(time_string);
 }
